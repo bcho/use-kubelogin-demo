@@ -9,6 +9,6 @@ jobs:
     steps:
     - uses: Azure/use-kubelogin@3377fe3d8857f9332f32dbe7f8fe7e5b156d9bc4
       with:
-        kubelogin-version: 'v0.0.24'
+        kubelogin-version: 'latest'
     - run: |
         kubelogin --version
