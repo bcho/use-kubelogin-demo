@@ -7,8 +7,10 @@ jobs:
   run-action:
     runs-on: ubuntu-latest
     steps:
-    - uses: Azure/use-kubelogin@3377fe3d8857f9332f32dbe7f8fe7e5b156d9bc4
+    - uses: azure/use-kubelogin@1
       with:
         kubelogin-version: 'latest'
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     - run: |
         kubelogin --version
