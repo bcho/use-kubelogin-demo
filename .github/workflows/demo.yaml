@@ -1,0 +1,14 @@
+name: Run
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  run-action:
+    runs-on: ubuntu-latest
+    steps:
+    - use: Azure/use-kubelogin@3377fe3d8857f9332f32dbe7f8fe7e5b156d9bc4
+      with:
+        kubelogin-version: '0.0.24'
+    - run: |
+        kubelogin --version
