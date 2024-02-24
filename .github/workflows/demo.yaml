@@ -7,7 +7,7 @@ jobs:
   run-action:
     runs-on: ubuntu-latest
     steps:
-    - uses: azure/use-kubelogin@v1
+    - uses: azure/use-kubelogin@45e09682adb5a0cad41a04ddd56a806dfeb79b4a
       with:
         kubelogin-version: 'latest'
       env:
